@@ -1,126 +1,115 @@
-📦 Ecommerce Analytics Pipeline
+# eCommerce Analytics Project
 
-A complete end-to-end data project built with Python, NumPy, Pandas and a self-generated ecommerce dataset.
+This project is a comprehensive eCommerce data analysis workflow built using **Python, NumPy, and pandas**, featuring **data generation, cleaning, master dataset creation, exploratory data analysis (EDA), and a Power BI dashboard**. It’s designed as a **portfolio-ready project** to showcase data analytics skills.
 
-This project simulates the internal data workflow of a real ecommerce company.
-Everything starts from scratch — I generated the raw datasets myself using Python, cleaned them, merged them into a master table, and finally used the cleaned data to build an analytics dashboard.
+---
 
-The goal of this project is to show the full process a data analyst would follow in a real company:
-data creation → cleaning → transformation → analysis → dashboard.
+## Project Structure
 
-🔹 Project Overview
+```
+ecommerce-analytics/
+│
+├── master_dataset.csv          # Final master dataset (orders + customers + products)
+├── generate_ecom_data.py       # Script to generate synthetic eCommerce data
+├── clean_master_data.py        # Script to clean and merge datasets into master
+├── eda_analysis.py             # Script to perform EDA and generate charts
+├── README.md                   # Project explanation (this file)
+├── dashboard.pbix              # Interactive Power BI dashboard
+```
 
-The project contains two main Python scripts:
+---
 
-1. Data Generator (generate_ecom_data.py)
+## Overview
 
-This script creates realistic synthetic ecommerce data, including:
+This project simulates a realistic eCommerce business with:
 
-100,000 customers
+- **100,000 customers**  
+- **2,000 products**  
+- **300,000 orders**  
+- **400,000 website sessions**  
+- **Monthly ad spend by channel**  
 
-2,000 products
+The workflow covers:  
 
-300,000 orders
+1. **Data Generation** – Creates synthetic but realistic eCommerce datasets.  
+2. **Data Cleaning & Master Dataset** – Removes duplicates, merges orders, customers, and product info into one master dataset.  
+3. **Exploratory Data Analysis (EDA)** – Analyzes trends such as top customers, product category revenue, monthly sales, and order metrics.  
+4. **Visualization** – Plots key metrics and trends using Matplotlib.  
+5. **Power BI Dashboard** – Interactive visualization to analyze business performance.
 
-400,000 website sessions
+---
 
-Monthly ad spend
+## EDA Highlights
 
-The dataset includes customer demographics, acquisition channels, product details, pricing, margins, order behavior, device usage, sessions, and marketing spend.
-It is designed to look similar to what a real ecommerce company would store.
+- **Top 10 Customers by Revenue** – Identify your most valuable customers.  
+- **Sales by Product Category** – Understand which categories generate the most revenue.  
+- **Average Order Value** – Assess typical order sizes.  
+- **Monthly Revenue Trend** – Track revenue growth over time.
 
-2. Data Cleaning & Master File Builder (clean_data.py)
+All EDA results are saved in `eda_output/` including CSVs and charts (`.png`).
 
-This script:
+---
 
-Removes duplicate rows
+## Usage
 
-Standardizes and cleans each dataset
+1. **Generate Data** (optional if you want to reproduce):
+```bash
+python generate_ecom_data.py
+```
 
-Creates a separate clean_data/ folder
+2. **Clean and Merge Datasets**:
+```bash
+python clean_master_data.py
+```
 
-Merges customers, orders, and products into a single master dataset
+3. **Perform EDA**:
+```bash
+python eda_analysis.py
+```
 
-Saves master_dataset.csv for analysis or dashboard use
+4. **Open Power BI Dashboard**:  
+Open `dashboard.pbix` to explore interactive visualizations of revenue, customers, products, and trends.
 
-The master file is structured so it can be used directly for SQL queries, dashboard creation, or deeper analysis.
+---
 
-📊 Dashboard
+## Key Insights
 
-Using the cleaned data, I built an analytics dashboard to explore:
+- Most revenue comes from **top 10% of customers**.  
+- **Electronics** and **Apparel** categories dominate sales.  
+- **Monthly revenue trend** shows a steady increase over the years.  
+- Power BI dashboard allows filtering by **category, customer, device, and channel** for deeper analysis.
 
-Sales trends
+---
 
-Customer demographics
+## Technologies Used
 
-Product performance
+- **Python**  
+- **NumPy**  
+- **pandas**  
+- **Matplotlib**  
+- **Power BI Desktop**
 
-Order behavior
+---
 
-Revenue patterns
+## Portfolio Impact
 
-Profitability
+This project demonstrates ability to:
 
-Device and channel attribution
+- Generate synthetic datasets for analytics practice.  
+- Clean and merge multiple data sources into a master dataset.  
+- Perform actionable EDA and visualize results.  
+- Build a professional Power BI dashboard with insights for decision-making.
 
-Ad spend patterns
+---
 
-This dashboard can be found in the dashboard/ folder (or screenshots if uploading PBIX).
+## Dashboard
+![Uploading Screenshot 2025-12-06 011345.png…]()
+<img width="1299" height="725" alt="Screenshot 2025-12-06 011022" src="https://github.com/user-attachments/assets/c798d3b3-02d5-43f2-94ab-7e370165dac7" />
 
-📂 Folder Structure
-ecommerce-analytics-pipeline/
-│── data/                     # Raw generated datasets
-│── clean_data/               # Cleaned datasets
-│── generate_ecom_data.py     # Data generator script
-│── clean_data.py             # Data cleaning + master dataset script
-│── master_dataset.csv        # Final combined dataset
-│── dashboard/                # Dashboard files or images
-│── README.md
 
-🧠 Skills Demonstrated
 
-Data cleaning and preprocessing
 
-Working with large datasets
+## Author
 
-NumPy and Pandas for data manipulation
-
-Merging multiple tables
-
-Creating realistic synthetic data
-
-Building KPI-driven dashboards
-
-Understanding ecommerce analytics
-
-🚀 How to Run the Project
-
-Download the repository
-
-Run generate_ecom_data.py to create raw data inside data/
-
-Run clean_data.py to clean the data and create the master dataset
-
-Use the master file to build dashboards or do analysis
-
-Both scripts run in a standard Python environment with Pandas and NumPy installed.
-
-📎 Why I Created This Project
-
-I wanted a project that shows real analyst workflow, not just a visualization.
-This repository demonstrates:
-
-How data is created
-
-How it is cleaned and structured
-
-How multiple tables are connected
-
-How insights come after proper data preparation
-
-It represents the type of work expected from a data analyst in ecommerce, marketing, or product teams.
-
-⭐ Final Note
-
-This project is designed to be simple to run but complex enough to show real-world thinking.
-The dataset sizes are large, the tables are realistic, and the workflow reflects actual industry practices.
+**Sakib Miya**  
+Data Analyst Portfolio Project
